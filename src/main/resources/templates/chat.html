@@ -39,7 +39,7 @@
         }
 
         function connect() {
-            var socket = new SockJS('/chat');
+            var socket = new SockJS('/ws');
             stompClient = StompJs.Stomp.over(socket);
 
             stompClient.connect({}, function (frame) {
