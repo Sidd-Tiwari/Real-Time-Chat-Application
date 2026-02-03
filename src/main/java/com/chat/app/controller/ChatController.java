@@ -17,8 +17,8 @@ public class ChatController {
         return message;
     }
 
-    @GetMapping("/chat")
+    @GetMapping("/")
     public String chatPage() {
-        return "chat"; // Returns the chat view
+        return "redirect:/chat"; // Returns the chat view
     }
 }
