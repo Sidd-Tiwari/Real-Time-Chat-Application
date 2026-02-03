@@ -1,11 +1,20 @@
-FROM eclipse-temurin:21-jdk-alpine
+# -------- BUILD STAGE --------
+FROM eclipse-temurin:21-jdk-alpine AS builder
 
 WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw clean package
+RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+
+
+# -------- RUN STAGE --------
+FROM eclipse-temurin:21-jre-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/target/*jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/real-time-chat-app-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]
