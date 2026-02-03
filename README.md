@@ -68,6 +68,11 @@ cd real-time-chat-app
 http://localhost:8080/chat
 ```
 
+## Testing Purpose
+```
+https://real-time-chat-application-z2r3.onrender.com
+```
+
 ---
 
 ## 🔄 WebSocket Flow
