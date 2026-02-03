@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chat</groupId>
-	<artifactId>app</artifactId>
+	<artifactId>real-time-chat-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>app</name>
+	<name>real-time-chat-application</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
